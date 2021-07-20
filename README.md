@@ -9,7 +9,7 @@ How the simulator works:
 There are several scripts in the Final System folder. These are mostly function scripts, and are called in the command.m file.
 The simulator takes 3 inputs to run the whole simulator, these are: the system to look at, the simulation time and a variable called s, which I will explain later.
 
-- Systems: It is possible to look at different systems, rather than only the "basic" Sun + planets system. You can look at the Sun + planets system and another including dwarf planets. Also available are the individual planetary systems of the Earth (the Moon + 4 satellites), Mars, Jupiter, Saturn, Uranus, Neptune and Pluto. There is also a Solar System system, which contains the Sun, the planets and their moons and the dwarf planets.
+- Systems: It is possible to look at different systems, rather than only the "basic" Sun + planets system. You can look at the Sun + planets system and another including dwarf planets. Also available are the individual planetary systems of the Earth (the Moon + 4 satellites), Mars, Jupiter, Saturn, Uranus, Neptune and Pluto. There is also a Solar System system, which contains the Sun, the planets and their moons and the dwarf planets. To this can be separately added Asteroids, Comets and TNOs, and all can be added together in a "full" system.
 
 - Simulation time: This is the end point of the simulation, and must be entered in days. 'auto' can also be entered, this makes the simulation run for as long as the longest orbital period in the system.
 
