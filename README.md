@@ -32,8 +32,6 @@ The first shows the orbital paths of the every object in the system.
 The second displays the difference between the simulated interpolated results and the JPL Horizons data, with one subplot per coordinate, and one curve per selected object in s.
 
 
-If you want to have a try using this tool, I hope you enjoy it and find the results as cool and interesting as I did.
-
 IMPORTANT: There is one major issue with the simulator.
 There is a matrix which holds the position and velocity coordinates for every object at every point.
 I have now realised this is a serious design flaw, as this maxes out the computer system's memory capacity.
@@ -52,3 +50,13 @@ The other folders contain evolutions of these files, to accomodate larger numbes
 - The 2 Body system use the interactions of the Sun and Mercury on each other.
 - For the 3 Body system, the simulator looks into the interactions between the Sun, Mercury and Venus. This was an important step to understand how to automate the processes involved.
 - The N Body system automates the calculations of the interactions between every object in the system, and is flexible in accomodating as large a system as needed.
+
+
+You may notice that there are two folders in each of the folders containing initial obect data and JPL data.
+I included the Tesla Roadster in my simulator, which at the time had just been launched, but I never used it in the final project.
+The system can still be called by the simulator, by entering 'Starman' in the system input.
+I have all the necessary data in their respective folders, entitled 080218, which was the date for this dataset.
+The 010100 folders contain the data used in the project, with the starting point of the simulator being the 1st of January 2000.
+
+
+If you want to have a try using this tool, I hope you enjoy it and find the results as cool and interesting as I did.
