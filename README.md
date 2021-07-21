@@ -30,3 +30,25 @@ Depending on the simulation time, the appropriate data is imported, and a result
 Once this is complete, two plots are displayed.
 The first shows the orbital paths of the every object in the system.
 The second displays the difference between the simulated interpolated results and the JPL Horizons data, with one subplot per coordinate, and one curve per selected object in s.
+
+
+If you want to have a try using this tool, I hope you enjoy it and find the results as cool and interesting as I did.
+
+IMPORTANT: There is one major issue with the simulator.
+There is a matrix which holds the position and velocity coordinates for every object at every point.
+I have now realised this is a serious design flaw, as this maxes out the computer system's memory capacity.
+I would fix this issue, but I do not have access to the MATLAB software anymore, so for now, there is nothing I can do.
+If you use this simulator, please be careful when running it with any system involving the Sun and the planets, I would recommend no longer than one year for the smaller systems, and shorter for larger ones.
+There shouldn't be any issues with the individual planetary systems.
+
+
+Extra folders:
+
+The 1 Body, 2 Body, 3 Body and N Body folders contain files used before creating the final simulator.
+The 1 Body files were provided by the demonstrators, and were an example of a working simulator.
+The other folders contain evolutions of these files, to accomodate larger numbesr of objects.
+
+- The 1 Body files involve the Sun gravitationally attracting one planet.
+- The 2 Body system use the interactions of the Sun and Mercury on each other.
+- For the 3 Body system, the simulator looks into the interactions between the Sun, Mercury and Venus. This was an important step to understand how to automate the processes involved.
+- The N Body system automates the calculations of the interactions between every object in the system, and is flexible in accomodating as large a system as needed.
