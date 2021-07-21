@@ -23,6 +23,12 @@ This then repeats until the simulation end point is reached.
 Because the solver used doesn't solve to regular intervals, the results need to be interpolated to obtain values at equally distant time points.
 Once this is done, the results can be compared to "accurate" results, to evaluate the accuracy of the simulator.
 
+The accuracy project involved not only looking at the effect of different object groups, but also at the impact of different solving methods.
+The Runge-Kutta solver primarily used in the simulator is MATLAB's inbuit ODE113 function.
+MATLAB also has an ODE45 function, which is similar to ODE113, and is supposed to be more precise, but also adds to the simulation's runtime.
+A correction to the acceleration calculations is also added, to take into account some effects of General Relativity.
+During the project, simulations were run without this correction to assess its effect.
+
 The data used in this project is taken from the JPL Horizons platform.
 For the initial data, only the first values are kept, but for the comparison stage, data for a one year, five year and ten year simulation are saved locally.
 Depending on the simulation time, the appropriate data is imported, and a results matrix is created, containing the difference between the simulated interpolated results, and the data from JPL Horizons, which is taken as accurate.
@@ -38,6 +44,18 @@ I have now realised this is a serious design flaw, as this maxes out the compute
 I would fix this issue, but I do not have access to the MATLAB software anymore, so for now, there is nothing I can do.
 If you use this simulator, please be careful when running it with any system involving the Sun and the planets, I would recommend no longer than one year for the smaller systems, and shorter for larger ones.
 There shouldn't be any issues with the individual planetary systems.
+
+
+Results folder:
+
+This folder contains four folders and extra files.
+The folders are: Comparisons, End Data, Parameters and Tables.
+
+- The Comparisons folder contains the comparison graphs for every system. For most of these, there are three files, for one year, five year and ten year simulations.
+- The End Data folder contains the position and velocity coordinates in every system, for different simulation times and solving methods.
+- The Parameters folder holds files containing orbital parameters for every system (orbital period, semi major axis, eccentricity, inclination). Some of these parameters were needed in the simulator, the rest were added for curiosity.
+- The Tables folder contains six files for every system. Each file relates to a position or velocity coordinate, and shows the difference to the JPL data for differing solving methods and object groups present. Results weren't able to be determined for every system.
+- There is also a Systems folder, which shows the orbital paths for every system, but I was unable to add this folder here, due to the size of some of the files. I also couldn't compress the folder enough.
 
 
 Extra folders:
